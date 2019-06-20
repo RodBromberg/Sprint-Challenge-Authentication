@@ -11,7 +11,7 @@ function generateToken(user) {
     const payload = {
         subject: user.id,
         username: user.username
-            // only for basic info publicly visible describing
+            // basic info about the token...nothing sensitive
     }
     const options = {
             expiresIn: '8h',
@@ -20,6 +20,7 @@ function generateToken(user) {
         // can add other options to token
     return jwt.sign(payload, secrets.jwtSecret, options)
 
-    // gets the payload/data and also the secret
-    // secret used to decrypt/encrypt
+    // gets the payload/data were adding to the token
+    //  also the secret used to decrypt/encrypt
+    
 }

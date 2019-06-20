@@ -12,6 +12,7 @@ module.exports = server => {
     server.get('/api/jokes', authenticate, getJokes);
 };
 
+//ddfsdfsfdsdfsnksdfjbshl
 
 function register(req, res) {
     // implement user registration
@@ -34,30 +35,7 @@ function register(req, res) {
         // error adding username/pass
 }
 
-// 22 lines of pure comments for carlos
-// function login(req, res) {
-//     // implement user login
-//     let { username, password } = req.body;
 
-//     db("users")
-//         .where({ username })
-//         .first()
-//         .then(user => {
-//             if (user && bcrypt.compareSync(password, user.password)) {
-//                 //Generates token
-//                 const token = Token.generateToken(user);
-//                 res.status(200).json({
-//                     message: `Hi ${user.username}!`,
-//                     token
-//                 });
-//             } else {
-//                 res.status(401).json({ message: "Error with creds" });
-//             }
-//         })
-//         .catch(err => {
-//             res.status(500).json(err);
-//         });
-// }
 
 function login(req, res) {
     let { username, password } = req.body;
